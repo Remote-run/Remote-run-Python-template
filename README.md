@@ -6,7 +6,7 @@ The template for running Python applications in the on the Remote run system.
 
 ## Requirements
 
-When submitting a Python request the current context of the executable will be packaged and sent to the server. When on the server the requirements.txt will be installed and the run-file (set in the config) will be run with the run prams (also set in the config). Because of the "why bother" approach python has to versioning and compatibility, a general solution wold be impractical, thats why you can set the docker image to run from. The default image is ```nvidia/cuda:10.1-runtime``` . You can put stuff in the requirements.txt to be installed on top of this. To avoid having to wait for installation, a image with the packages preinstalled cold be used e.g. ```tensorflow/tensorflow:latest-gpu ```
+When submitting a Python request the current context of the executable will be packaged and sent to the server. When on the server the requirements.txt will be installed and the run-file (set in the config) will be run with the run prams (also set in the config). Because of the "why bother" approach python has to versioning and compatibility, a general solution wold be impractical, thats why you can set the docker image to run from. The default image is ```nvidia/cuda:10.1-runtime``` . You can put stuff in the requirements.txt to be installed on top of this. To avoid having to wait for installation, a image with the packages preinstalled cold be used e.g. ```tensorflow/tensorflow:latest-gpu ``` if you need a spesific verson of tf you can find an image with the matching verson [here](https://hub.docker.com/r/tensorflow/tensorflow/tags) for Tf 1 you can use somthing like this ```tensorflow/tensorflow:1.15.2-gpu``` 
 
 To run successfully you need to:
 
